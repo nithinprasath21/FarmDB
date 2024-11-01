@@ -43,10 +43,14 @@
             <canvas id="stockChart"></canvas>
         </div>
 
+        <!-- JSON data for charting -->
+        {{ item_names|json_script:"itemNames" }}
+        {{ quantities|json_script:"quantities" }}
+
         <script>
-            // Pass Django template variables to JavaScript
-            const itemNames = {{ item_names|safe }};
-            const quantities = {{ quantities|safe }};
+            // Retrieve data from the JSON script tags
+            const itemNames = JSON.parse(document.getElementById('itemNames').textContent);
+            const quantities = JSON.parse(document.getElementById('quantities').textContent);
 
             // Calculate dynamic limits for the y-axis
             const minQuantity = Math.min(...quantities);
