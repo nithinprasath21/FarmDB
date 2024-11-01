@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js library -->
+</head>
+<body>
+    <div class="container">
+        <!-- Dashboard Header -->
+        <div class="header">
+            <h2 class="dashboard-title">Dashboard</h2>
+            <a href="{% url 'logout' %}" class="logout-button">Logout</a>
+        </div>
+
+        <!-- Green Button Container -->
+        <div class="button-container">
+            <a href="{% url 'add_supplier' %}" class="nav-button">
+                <img src="https://thumbs.dreamstime.com/b/farmer-woman-basket-vegetables-produce-market-supplier-organic-food-agriculture-soil-portrait-farmer-women-321120451.jpg" alt="Add Supplier">
+                <span>Add Supplier</span>
+            </a>
+            <a href="{% url 'add_transporter' %}" class="nav-button">
+                <img src="https://w7.pngwing.com/pngs/654/992/png-transparent-transformation-vehicle-and-aircraft-logo-logistics-truckload-shipping-freight-forwarding-agency-freight-transport-cargo-logistic-service-people-mode-of-transport.png" alt="Add Transporter">
+                <span>Add Transporter</span>
+            </a>
+            <a href="{% url 'add_items' %}" class="nav-button">
+                <img src="https://agrierp.com/blog/wp-content/uploads/2023/03/The-Importance-of-Farm-Inventory-Management-copy-scaled.jpg" alt="Add Items">
+                <span>Add Items</span>
+            </a>
+            <a href="{% url 'view_items' %}" class="nav-button">
+                <img src="https://www.orgpick.com/cdn/shop/products/vegetables-box.jpg?v=1541021440" alt="View Items">
+                <span>View Items</span>
+            </a>
+        </div>
+        <div class="header">
+            <h2 class="dashboard-title">Stock Analysis</h2>
+        </div>
+        <!-- Stock Analysis Chart Section -->
+        <div class="chart-container" style="width: 80%; height: 400px; margin: 0 auto; padding: 2rem;">
+            <canvas id="stockChart"></canvas>
+        </div>
+
+        <script>
+            // Pass Django template variables to JavaScript
+            const itemNames = {{ item_names|safe }};
+            const quantities = {{ quantities|safe }};
+
+            // Calculate dynamic limits for the y-axis
+            const minQuantity = Math.min(...quantities);
+            const maxQuantity = Math.max(...quantities);
+            const yAxisMin = minQuantity - 100;  // Lower limit
+            const yAxisMax = maxQuantity + 30;  // Upper limit
+
+            // Define a color array for each item bar
+            const colors = itemNames.map((_, i) => `hsl(${i * (360 / itemNames.length)}, 70%, 50%)`);
+
+            // Chart.js setup
+            const ctx = document.getElementById('stockChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: itemNames,
+                    datasets: [{
+                        data: quantities,
+                        backgroundColor: colors,  // Apply colors array
+                        borderColor: colors.map(color => color.replace('50%', '40%')), // Darken border
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Item Name'
+                            }
+                        },
+                        y: {
+                            beginAtZero: false,  // Allow dynamic lower limit
+                            min: yAxisMin,       // Dynamic min
+                            max: yAxisMax,       // Dynamic max
+                            title: {
+                                display: true,
+                                text: 'Quantity'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false  // Hide legend below title
+                        },
+                        title: {
+                            display: false,
+                            text: 'Stock Analysis'
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>

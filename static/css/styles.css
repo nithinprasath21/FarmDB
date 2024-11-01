@@ -1,0 +1,1053 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+h1, h2 {
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container for all pages */
+.container {
+    max-width: 800px;
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+thead th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e9f5ee;
+}
+
+/* Form Styles */
+.form-style label {
+    font-weight: bold;
+    color: #555;
+    margin-top: 8px;
+    display: block;
+}
+
+input[type="text"], input[type="number"], input[type="password"], select {
+    width: 90%;
+    padding: 12px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    background-color: #e9f5ee;
+    color: #333;
+}
+
+/* Button Group (Optional) */
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #4CAF50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    color: white;
+}
+
+.navbar h1 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 10px 0 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #007BFF;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styles */
+.added-items table {
+    width: 75%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.added-items th, .added-items td {
+    border: 1px solid #4CAF50;
+    padding: 10px;
+    text-align: left;
+}
+
+.added-items tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.added-items h2 {
+    text-align: center;
+    color: #4CAF50;
+}
+/* Dashboard Title Style */
+.dashboard-title {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    text-align: center; /* Center align the navbar */
+    margin-bottom: 20px; /* Space below the navbar */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block; /* Align buttons horizontally */
+    margin: 0 10px; /* Space between buttons */
+}
+
+.nav-button {
+    display: flex;
+    align-items: center; /* Center image and text vertically */
+    justify-content: center; /* Center content horizontally */
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Button padding */
+    border-radius: 5px; /* Round corners */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.nav-button img {
+    width: 30px; /* Fixed width for images */
+    height: 30px; /* Fixed height for images */
+    margin-right: 8px; /* Space between image and text */
+}
+
+.nav-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Table Style */
+.recent-items table {
+    width: 75%; /* Table width */
+    margin: 0 auto; /* Center the table */
+    border-collapse: collapse; /* Collapse borders */
+}
+
+.recent-items th, .recent-items td {
+    border: 1px solid #4CAF50; /* Border color */
+    padding: 10px; /* Padding in cells */
+    text-align: left; /* Align text */
+}
+
+.recent-items tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+}
+/* Dashboard Title Style */
+.dashboard-title {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    display: inline-block; /* Inline block to align with logout button */
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between; /* Space between title and logout */
+    align-items: center; /* Align items vertically */
+    padding: 0 20px; /* Add horizontal padding */
+}
+
+/* Logout Button Styles */
+.logout-button {
+    background-color: #f44336; /* Red background for logout */
+    color: white; /* White text color */
+    padding: 10px 15px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.logout-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Navbar Styles */
+.navbar {
+    text-align: center; /* Center align the navbar */
+    margin-bottom: 20px; /* Space below the navbar */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block; /* Align buttons horizontally */
+    margin: 0 20px; /* Space between buttons */
+}
+
+.nav-button {
+    display: block; /* Make the entire area clickable */
+    width: 150px; /* Set a fixed width for the buttons */
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    border-radius: 10px; /* Round corners */
+    text-decoration: none; /* Remove underline from links */
+    overflow: hidden; /* Hide overflow */
+    text-align: center; /* Center text */
+    transition: background-color 0.3s; /* Smooth background transition */
+    margin-bottom: 10px; /* Add space below the button */
+}
+
+.nav-button img {
+    width: 100%; /* Image fills the button width */
+    height: auto; /* Maintain aspect ratio */
+    border-top-left-radius: 10px; /* Round corners of the top */
+    border-top-right-radius: 10px; /* Round corners of the top */
+}
+
+.nav-button span {
+    display: block; /* Make span a block element */
+    color: white; /* Text color */
+    font-weight: bold; /* Make text bold */
+    padding: 10px 0; /* Padding for spacing */
+}
+
+.nav-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Table Style */
+.recent-items table {
+    width: 75%; /* Table width */
+    margin: 0 auto; /* Center the table */
+    border-collapse: collapse; /* Collapse borders */
+}
+
+.recent-items th, .recent-items td {
+    border: 1px solid #4CAF50; /* Border color */
+    padding: 10px; /* Padding in cells */
+    text-align: left; /* Align text */
+}
+
+.recent-items tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+}
+/* Back Button Style */
+.back-button {
+    background-color: #2196F3; /* Blue color */
+    color: white; /* White text */
+    padding: 10px 15px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Inline block to allow margin */
+    margin-bottom: 20px; /* Space below button */
+}
+
+.back-button:hover {
+    background-color: #1976D2; /* Darker blue on hover */
+}
+
+/* Edit and Delete Button Styles */
+.edit-button, .delete-button {
+    background-color: #FFC107; /* Yellow for edit */
+    color: white; /* White text */
+    padding: 5px 10px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.edit-button:hover {
+    background-color: #FFA000; /* Darker yellow on hover */
+}
+
+.delete-button {
+    background-color: #f44336; /* Red for delete */
+}
+
+.delete-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+/* Container for the form */
+.container {
+    max-width: 700px; /* Increased width */
+    margin: auto;
+    padding: 30px; /* More padding */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+    color: #28a745; /* Green color for heading */
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Button styles */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Add space between buttons */
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: calc(50% - 10px); /* Adjusted for spacing */
+}
+
+.btn-green {
+    background-color: #28a745; /* Green button for Update Supplier */
+}
+
+.btn-blue {
+    background-color: #007bff; /* Blue button for Back to Suppliers */
+}
+
+
+/* styles.css */
+/* Styles for the container, form, buttons, etc. */
+
+.container {
+    max-width: 700px; /* Adjust width as needed */
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+    color: #28a745; /* Green color for heading */
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between buttons */
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: calc(50% - 10px); /* Adjust for spacing */
+}
+
+.btn-green {
+    background-color: #28a745; /* Green button */
+}
+
+.btn-blue {
+    background-color: #007bff; /* Blue button */
+}
+
+.table-style {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.table-style th,
+.table-style td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.table-style th {
+    background-color: #f2f2f2;
+}
+/* styles.css */
+
+.btn-red {
+    background-color: #dc3545; /* Red button for delete confirmation */
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Ensure button styles are consistent */
+.btn {
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: calc(50% - 10px); /* Adjust for spacing */
+}
+
+/* Additional existing styles... */
+/* Add this to your existing CSS file */
+
+.btn-primary {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px; /* Adjust margins for spacing */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-secondary {
+    background-color: #007BFF; /* Blue */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 10px; /* Space between buttons */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* You can also style the delete button if necessary */
+.btn-delete {
+    background-color: #f44336; /* Red for delete */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 10px; /* Space between buttons */
+    cursor: pointer;
+    border-radius: 5px;
+}
+.table-style thead th {
+    background-color: #007BFF; /* Change this to your desired color */
+    color: white; /* Text color */
+    padding: 10px; /* Add padding for better appearance */
+}
+
+.btn {
+    padding: 10px 20px; /* Increase horizontal padding for wider buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Increase font size */
+    min-width: 100px; /* Set a minimum width for the buttons */
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Yellow */
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #007bff; /* Blue */
+    color: white;
+    margin-top: 10px; /* Add space above the button */
+}
+
+.table-style {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-style th,
+.table-style td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: left;
+}
+
+.table-style th {
+    background-color: #f8f9fa; /* Light gray for header */
+}
+/* styles.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    background-color: #007bff; /* Set to your preferred blue color */
+    color: white; /* Text color for the header */
+    padding: 10px; /* Padding for the header */
+    text-align: left; /* Align text to the left */
+}
+
+table td {
+    padding: 10px; /* Padding for table data */
+    border: 1px solid #dee2e6; /* Add border to table cells */
+}
+
+/* Button styles */
+.btn {
+    padding: 10px 20px; /* Increase horizontal padding for wider buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Increase font size */
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Yellow */
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.back-button {
+    display: inline-block; /* Allow for margins */
+    margin-top: 20px; /* Add some space above the button */
+    padding: 10px 20px; /* Button padding */
+    background-color: #007bff; /* Blue */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+}
+.edit-button,
+.delete-button {
+    width: 100px; /* Adjust the width as needed */
+    padding: 10px; /* Add padding for better appearance */
+    text-align: center; /* Center the text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.edit-button {
+    background-color: #4CAF50; /* Green for edit */
+    color: white; /* Text color */
+}
+
+.delete-button {
+    background-color: #f44336; /* Red for delete */
+    color: white; /* Text color */
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    opacity: 0.8; /* Slight transparency on hover */
+}
+/* Styles for buttons in view_items.html and add_items.html */
+.button-group {
+    display: flex; /* Use flexbox for button alignment */
+    justify-content: space-between; /* Space between buttons */
+    margin-top: 20px; /* Optional margin for spacing */
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 10px 20px; /* Add padding for better appearance */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    color: white; /* Text color */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.btn-primary {
+    background-color: #4CAF50; /* Green for Add Item */
+}
+
+.btn-secondary {
+    background-color: #007BFF; /* Blue for Back to Dashboard */
+}
+
+.edit-button,
+.delete-button {
+    width: 100px; /* Set button width */
+    padding: 10px; /* Add padding */
+    text-align: center; /* Center text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.edit-button {
+    background-color: #4CAF50; /* Green for edit */
+    color: white; /* Text color */
+}
+
+.delete-button {
+    background-color: #f44336; /* Red for delete */
+    color: white; /* Text color */
+}
+
+.edit-button:hover,
+.delete-button:hover,
+.btn-primary:hover,
+.btn-secondary:hover {
+    opacity: 0.8; /* Slight transparency on hover */
+}
+/* Styles for button group in add_items.html */
+.button-group {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between buttons */
+    margin-top: 20px; /* Optional margin for spacing */
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 10px 20px; /* Add padding for better appearance */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    color: white; /* Text color */
+    cursor: pointer; /* Change cursor to pointer */
+    flex: 1; /* Allow buttons to grow and take equal space */
+    margin-right: 10px; /* Add margin between buttons */
+}
+
+.btn-primary {
+    background-color: #4CAF50; /* Green for Add Item */
+}
+
+.btn-secondary {
+    background-color: #007BFF; /* Blue for Back to Dashboard */
+}
+
+/* Remove margin from the last button */
+.button-group a:last-child,
+.button-group button:last-child {
+    margin-right: 0; /* No margin on the right for the last button */
+}
+
+/* Additional styles for form elements */
+.form-style {
+    margin-top: 20px; /* Margin for form elements */
+}
+
+/* Optional: Style labels and inputs */
+label {
+    display: block; /* Block display for labels */
+    margin: 10px 0 5px; /* Spacing for labels */
+}
+
+input,
+select {
+    width: 90%; /* Full width for inputs and selects */
+    padding: 10px; /* Padding for better appearance */
+    margin-bottom: 15px; /* Spacing between form elements */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners */
+}
+.button-group {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between buttons */
+    margin-top: 20px; /* Optional margin for spacing */
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 10px 20px; /* Add padding for better appearance */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    color: white; /* Text color */
+    cursor: pointer; /* Change cursor to pointer */
+    flex: 1; /* Allow buttons to grow and take equal space */
+    margin-right: 10px; /* Add margin between buttons */
+}
+
+.btn-primary {
+    background-color: #4CAF50; /* Green for Add Item */
+}
+
+.btn-secondary {
+    background-color: #007BFF; /* Blue for Back to Dashboard */
+}
+
+.button-group a:last-child,
+.button-group button:last-child {
+    margin-right: 0; /* No margin on the right for the last button */
+}
+
+/* Optional: Style labels and inputs */
+label {
+    display: block; /* Block display for labels */
+    margin: 10px 0 5px; /* Spacing for labels */
+}
+
+input,
+select {
+    width: 90%; /* Full width for inputs and selects */
+    padding: 10px; /* Padding for better appearance */
+    margin-bottom: 15px; /* Spacing between form elements */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners */
+}
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+
+.form-style input[type="text"],
+.form-style input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+/* Container styles */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logout-button {
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Green button container styles */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #4CAF50;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Button styles inside the green container */
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    max-width: 200px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #3e8e41;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button img {
+    width: 100%;
+    height: 140px;  /* Larger fixed height */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.nav-button span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Chart container */
+.chart-container h3 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-button {
+        width: 100%; /* Stack buttons on smaller screens */
+    }
+}
+/* Center-align button container */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #4CAF50; /* Light green container background */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    max-width: 200px;
+    padding: 10px;
+    background-color: rgb(0, 140, 0); /* Green button background */
+    color: white; /* White text for contrast */
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin: 0 auto;
+}
+
+.nav-button:hover {
+    background-color: #1B5E20; /* Darker green on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling within buttons */
+.nav-button img {
+    width: 100%;
+    height: 140px; /* Fixed height */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Text styling within buttons */
+.nav-button span {
+    font-size: 16px;
+    font-weight: bold;
+    color: white; /* White text color */
+}
+
+/* Responsive layout adjustment */
+@media (max-width: 768px) {
+    .nav-button {
+        width: 100%; /* Stack buttons on smaller screens */
+    }
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin: 10px 0;
+}

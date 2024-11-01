@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Edit Transporter</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Edit Transporter</h2>
+
+        <form method="POST" class="form-style">
+            {% csrf_token %}
+            <label for="name">Transporter Name:</label>
+            <input type="text" name="name" value="{{ transporter.name }}" required placeholder="Enter transporter name">
+
+            <label for="contact">Contact:</label>
+            <input type="text" name="contact" value="{{ transporter.contact }}" required placeholder="Enter contact number">
+
+            <label for="vehicle_number">Vehicle Number:</label>
+            <input type="text" name="vehicle_number" value="{{ transporter.vehicle_number }}" required placeholder="Enter vehicle number">
+
+            <button type="submit" class="btn-primary">Update Transporter</button>
+            <a href="{% url 'add_transporter' %}" class="btn-secondary">Back to Transporters</a>
+        </form>
+    </div>
+</body>
+</html>
